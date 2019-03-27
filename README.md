@@ -4,11 +4,11 @@ This is my customized repo.
 
 ## Features
 This repo contains some useful scripts
-1. [ ] prepare the python's virtual environment
+1.  [x] prepare the python's virtual environment
 ```bash
 bash prepare_env.sh
 ```
-2. [ ] clean the compiled objs
+2.  [x] clean the compiled objs
 ```bash
 bash clean.sh
 ```
