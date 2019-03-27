@@ -13,12 +13,7 @@ function create_venv(){
 function install_python_packages(){
     # install packages into virtual environment
     source venv/bin/activate
-    pip install torch==0.3.1
-    pip install torchvision
-    pip install scipy
-    pip install opencv-python
-    pip install cffi
-    pip install tensorboardX
+    pip install -r requirements.txt
     deactivate
 }
 

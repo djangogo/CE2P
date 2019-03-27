@@ -1,0 +1,10 @@
+opencv-python==3.4.0.12
+pillow==5.2.0
+protobuf==3.6.1
+pycocotools==2.0
+six==1.11.0
+tensorboardx==1.1
+torch==0.4.1
+torchvision==0.2.1
+cffi
+scipy
