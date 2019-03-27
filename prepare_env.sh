@@ -7,7 +7,7 @@ LIP_DATASET_DIR=/home/user/dataset/LIP
 
 # create virtual environment
 function create_venv(){
-    pip3 --user install virtualenv
+    pip3 install --user virtualenv
     virtualenv -p python3 venv
 }
 
