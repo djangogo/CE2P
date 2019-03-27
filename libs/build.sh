@@ -13,6 +13,9 @@ find . -name '*.o' -delete
 CUDA_GENCODE="-gencode=arch=compute_61,code=sm_61"
 
 
+CUDA_NAME=cuda
+NVCC=/usr/local/${CUDA_NAME}/bin/nvcc
+
 pushd src 
-nvcc -I/usr/local/cuda/include --expt-extended-lambda -O3 -c -o bn.o bn.cu -x cu -Xcompiler -fPIC -std=c++11 ${CUDA_GENCODE}
+${NVCC} -I/usr/local/${CUDA_NAME}/include --expt-extended-lambda -O3 -c -o bn.o bn.cu -x cu -Xcompiler -fPIC -std=c++11 ${CUDA_GENCODE}
 popd
