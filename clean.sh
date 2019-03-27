@@ -8,5 +8,4 @@ find -name "*.pyc" -not -path "./venv/*" -delete
 # Delete all objs in libs folder
 pushd libs
 find . -name '*.o' -delete
-find . -name '*.cu' -delete
 popd

@@ -2,7 +2,6 @@
 
 # Delete the obj file compiled before
 find . -name '*.o' -delete
-find . -name '*.cu' -delete
 
 # Configuration
 # CUDA_GENCODE="\
@@ -14,16 +13,6 @@ find . -name '*.cu' -delete
 CUDA_GENCODE="-gencode=arch=compute_61,code=sm_61"
 
 
-pushd src
-nvcc \
--I/usr/local/cuda/include \
---expt-extended-lambda \
--O3 \
--c \
--o bn.o bn.cu \
--x cu \
--Xcompiler \
--fPIC \
--std=c++11 \
-${CUDA_GENCODE}
+pushd src 
+nvcc -I/usr/local/cuda/include --expt-extended-lambda -O3 -c -o bn.o bn.cu -x cu -Xcompiler -fPIC -std=c++11 ${CUDA_GENCODE}
 popd
