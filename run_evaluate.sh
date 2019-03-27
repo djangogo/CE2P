@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source venv/bin/activate
+
 CS_PATH='./dataset/LIP'
 BS=32
 GPU_IDS='0'
@@ -15,3 +17,6 @@ python evaluate.py --data-dir ${CS_PATH} \
        --restore-from ${SNAPSHOT_FROM}\
        --dataset ${DATASET}\
        --num-classes ${NUM_CLASSES}
+
+
+deactivate

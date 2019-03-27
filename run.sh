@@ -19,6 +19,8 @@ if [[ ! -e ${SNAPSHOT_DIR} ]]; then
     mkdir -p  ${SNAPSHOT_DIR}
 fi
 
+source venv/bin/activate
+
 python train.py --data-dir ${CS_PATH} \
        --random-mirror\
        --random-scale\
@@ -34,3 +36,5 @@ python train.py --data-dir ${CS_PATH} \
        --epochs ${EPOCHS}
 
 python evaluate.py
+
+deactivate
