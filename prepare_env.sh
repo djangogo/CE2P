@@ -21,8 +21,8 @@ function install_python_packages(){
 function compile_modules(){
     # compile modules
     source venv/bin/activate
-    pushd modules
-    sh build.sh
+    pushd libs
+    bash build.sh
     python build.py
     popd
     deactivate
